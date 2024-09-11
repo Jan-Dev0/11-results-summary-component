@@ -68,6 +68,7 @@ body {
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 1.8rem;
   font-weight: 500;
+  background-color: #0b1215;
   color: var(--light-lavender);
   min-height: 100vh;
   display: flex;
@@ -79,6 +80,7 @@ body {
 /* Card styles */
 
 .card {
+  background-color: var(--white);
   min-width: 30rem;
   max-width: 37.5rem;
   display: flex;
@@ -212,6 +214,9 @@ body {
 
 /* Responisve styles for desktop view */
 @media (min-width: 47.5rem) {
+  body {
+    background-color: #FFFFF0;
+  }
   .card {
     flex-direction: row;
     max-width: 80rem;
