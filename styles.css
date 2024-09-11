@@ -220,6 +220,7 @@ body {
     background-color: hwb(60 75% 0%);
   }
   .card {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     flex-direction: row;
     max-width: 80rem;
     border-radius: 30px;
