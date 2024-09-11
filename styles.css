@@ -86,6 +86,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+  
 }
 
 /* Header Styles */
@@ -216,7 +217,7 @@ body {
 /* Responisve styles for desktop view */
 @media (min-width: 47.5rem) {
   body {
-    background-color: #FFFFF0;
+    background-color: hwb(60 75% 0%);
   }
   .card {
     flex-direction: row;
