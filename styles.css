@@ -123,6 +123,7 @@ body {
   font-size: 4.8rem;
   font-weight: 800;
   color: var(--white);
+  line-height: 1.1;
 }
 .card__score-level {
   font-size: 2.8rem;
@@ -136,7 +137,7 @@ body {
 /* Summary styles */
 
 .card__summary {
-  padding: 0 1.6rem;
+  padding: 0 1.6rem 2.4rem 1.6rem;
   display: flex;
   flex-direction: column;
 }
@@ -161,7 +162,7 @@ body {
 }
 .card__result-category-wrapper {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 .card__result-score-wrapper {
   margin-left: auto;
@@ -220,9 +221,14 @@ body {
   .card {
     flex-direction: row;
     max-width: 80rem;
+    border-radius: 30px;
   }
   .card__header {
     flex: 1;
+    border-radius: 30px;
+  }
+  .card__score-number {
+    font-size: 6.4rem;
   }
   .card__summary {
     padding: 3.2rem;
