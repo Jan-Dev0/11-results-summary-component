@@ -1,0 +1,226 @@
+/* General reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* CSS variables */
+
+:root {
+  /* ### Primary */
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  /* ## Gradients */
+
+  --bg-light-slate-blue: hsl(252, 100%, 67%);
+  --bg-light-royal-blue: hsl(241, 81%, 54%);
+
+  --circle-violet-blue: hsla(256, 72%, 46%, 1);
+  --circle-persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* ### Neutral */
+
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+/* Global styles */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--light-lavender);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card styles */
+
+.card {
+  min-width: 30rem;
+  max-width: 37.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+/* Header Styles */
+.card__header {
+  background: linear-gradient(
+    var(--bg-light-slate-blue),
+    var(--bg-light-royal-blue)
+  );
+  padding: 3.2rem;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+}
+.card__title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+.card__score {
+  background: linear-gradient(
+    var(--circle-violet-blue),
+    var(--circle-persian-blue)
+  );
+  padding: 2.4rem;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+}
+.card__score-number {
+  font-size: 4.8rem;
+  font-weight: 800;
+  color: var(--white);
+}
+.card__score-level {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--white);
+}
+.card__score-info {
+  text-align: center;
+}
+
+/* Summary styles */
+
+.card__summary {
+  padding: 0 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+.card__summary-heading {
+  color: var(--dark-gray-blue);
+}
+
+.card__result-list {
+  margin-top: 1rem;
+  padding: 0;
+  list-style: none;
+}
+.card__result-category {
+  padding: 1.6rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.6rem;
+  border-radius: 15px;
+}
+.card__result-category:last-of-type {
+  margin-bottom: 0;
+}
+.card__result-category-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+.card__result-score-wrapper {
+  margin-left: auto;
+}
+.card__result-score-wrapper {
+  color: darkgray;
+}
+.card__result-score {
+  color: var(--dark-gray-blue);
+}
+
+.card__result-category--reaction {
+  background-color: hsla(0, 100%, 67%, 0.05);
+  color: var(--light-red);
+}
+.card__result-category--memory {
+  background-color: hsla(39, 100%, 56%, 0.05);
+  color: var(--orangey-yellow);
+}
+.card__result-category--verbal {
+  background-color: hsla(166, 100%, 37%, 0.05);
+  color: var(--green-teal);
+}
+.card__result-category--visual {
+  background-color: hsla(234, 85%, 45%, 0.05);
+  color: var(--cobalt-blue);
+}
+
+/* Button styles */
+.card__action {
+  margin-top: 3.2rem;
+  text-align: center;
+}
+.card__button {
+  background-color: var(--dark-gray-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  padding: 1.6rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.card__button:hover {
+  background: linear-gradient(
+    var(--bg-light-royal-blue),
+    var(--bg-light-slate-blue)
+  );
+}
+
+/* Responisve styles for desktop view */
+@media (min-width: 47.5rem) {
+  .card {
+    flex-direction: row;
+    max-width: 80rem;
+  }
+  .card__header {
+    flex: 1;
+  }
+  .card__summary {
+    padding: 3.2rem;
+    flex: 1;
+  }
+}
